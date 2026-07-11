@@ -1298,5 +1298,44 @@
     "youtube": "https://www.youtube.com/@SemiAutomaticFire",
     "region": "NA",
     "status": "active"
+  },
+  {
+    "id": "1619886",
+    "name": "haloman3333",
+    "display": "west",
+    "bounce": 89,
+    "nobounce": 81,
+    "consistency": 71,
+    "cam": 76,
+    "device": "PC",
+    "youtube": "https://www.youtube.com/no",
+    "region": "EU",
+    "status": "active"
+  },
+  {
+    "id": "10776658087",
+    "name": "larpanic",
+    "display": "larp",
+    "bounce": 94,
+    "nobounce": 98,
+    "consistency": 74,
+    "cam": 100,
+    "device": "MOB",
+    "youtube": "https://www.youtube.com/no",
+    "region": "EU",
+    "status": "active"
+  },
+  {
+    "id": "10776658087",
+    "name": "larpanic",
+    "display": "larp",
+    "bounce": 94,
+    "nobounce": 98,
+    "consistency": 74,
+    "cam": 100,
+    "device": "MOB",
+    "youtube": "https://www.youtube.com/no",
+    "region": "EU",
+    "status": "active"
   }
 ]
