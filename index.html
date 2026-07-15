@@ -3,14 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bet365 - Bet Receipt</title>
+    <title>Bet365 - World Cup 2026 Semifinal</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             background: #1a1a1a;
             display: flex;
@@ -19,37 +14,23 @@
             min-height: 100vh;
             font-family: 'Courier New', monospace;
         }
-
         .receipt {
             background: #0d0d0d;
             color: #e0e0e0;
-            width: 420px;
+            width: 460px;
             padding: 25px 20px;
             border-radius: 6px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            box-shadow: 0 0 30px rgba(0,0,0,0.6);
             border: 1px solid #2a2a2a;
         }
-
         .header {
             text-align: center;
             border-bottom: 1px dashed #444;
             padding-bottom: 15px;
             margin-bottom: 15px;
         }
-
-        .header .logo {
-            color: #ffd700;
-            font-size: 22px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        .header .receipt-info {
-            font-size: 11px;
-            color: #888;
-            margin-top: 5px;
-        }
-
+        .header .logo { color: #ffd700; font-size: 22px; font-weight: bold; letter-spacing: 2px; }
+        .header .receipt-info { font-size: 11px; color: #888; margin-top: 5px; }
         .event {
             text-align: center;
             background: #1a1a1a;
@@ -57,101 +38,44 @@
             border-radius: 4px;
             margin-bottom: 15px;
         }
-
-        .event .title {
-            color: #ffd700;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .event .match {
-            font-size: 18px;
-            font-weight: bold;
-            margin: 8px 0;
-        }
-
-        .section {
-            border-bottom: 1px solid #222;
-            padding: 12px 0;
-        }
-
-        .section .label {
-            color: #888;
-            font-size: 11px;
-            text-transform: uppercase;
-        }
-
-        .section .value {
-            font-size: 14px;
-            margin-top: 2px;
-        }
-
-        .row {
-            display: flex;
-            justify-content: space-between;
-            margin: 6px 0;
-        }
-
-        .row .key {
-            color: #888;
-            font-size: 12px;
-        }
-        .row .val {
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .highlight {
-            color: #00ff88;
-        }
-
+        .event .title { color: #ffd700; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        .event .match { font-size: 18px; font-weight: bold; margin: 8px 0; }
+        .event .venue { font-size: 11px; color: #aaa; }
+        .section { border-bottom: 1px solid #222; padding: 12px 0; }
+        .section .label { color: #888; font-size: 11px; text-transform: uppercase; margin-bottom: 4px; }
+        .row { display: flex; justify-content: space-between; margin: 6px 0; }
+        .row .key { color: #888; font-size: 12px; }
+        .row .val { font-size: 12px; font-weight: bold; }
+        .highlight { color: #00ff88; }
         .score {
             text-align: center;
-            font-size: 36px;
+            font-size: 38px;
             font-weight: bold;
             margin: 10px 0;
-            letter-spacing: 4px;
+            letter-spacing: 5px;
         }
-
-        .scorers {
-            font-size: 11px;
-            color: #aaa;
-            text-align: center;
-            line-height: 1.6;
-        }
-
+        .scorers { font-size: 11px; color: #ccc; text-align: center; line-height: 1.7; }
+        .scorers span { color: #ffd700; }
         .status {
             text-align: center;
-            padding: 10px;
+            padding: 12px;
             background: #002b1f;
             border-radius: 4px;
             color: #00ff88;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 18px;
             margin: 15px 0;
+            letter-spacing: 1px;
         }
-
         .payout-section {
             background: #111;
-            padding: 15px;
+            padding: 18px;
             border-radius: 4px;
             text-align: center;
             margin: 15px 0;
         }
-
-        .payout-amount {
-            font-size: 32px;
-            font-weight: bold;
-            color: #00ff88;
-        }
-
-        .profit {
-            color: #00cc66;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-
+        .payout-amount { font-size: 34px; font-weight: bold; color: #00ff88; }
+        .profit { color: #00cc66; font-size: 14px; margin-top: 5px; }
         .footer {
             text-align: center;
             font-size: 10px;
@@ -160,15 +84,20 @@
             border-top: 1px dashed #333;
             padding-top: 15px;
         }
-
-        .footer .warning {
-            color: #ff6600;
-            margin-top: 5px;
+        .footer .warning { color: #ff6600; margin-top: 5px; }
+        .stats {
+            background: #111;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 10px;
+            color: #aaa;
+            margin-top: 10px;
+            line-height: 1.6;
+            text-align: center;
         }
-
         .print-btn {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin-top: 15px;
             background: #ffd700;
             color: #000;
@@ -178,11 +107,7 @@
             cursor: pointer;
             font-size: 14px;
         }
-
-        .print-btn:hover {
-            background: #ffed4a;
-        }
-
+        .print-btn:hover { background: #ffed4a; }
         @media print {
             body { background: #fff; }
             .print-btn { display: none; }
@@ -194,14 +119,15 @@
         <div class="header">
             <div class="logo">BET365</div>
             <div class="receipt-info">
-                Receipt: #WC-2026-ARG-ENG-884291<br>
-                Date: 2026-07-15 | 14:32 UTC
+                Receipt: #WC-2026-SEMI-ARG-ENG-229841<br>
+                Date: 2026-07-15 | 22:48 UTC
             </div>
         </div>
 
         <div class="event">
-            <div class="title">FIFA World Cup 2026 · Quarter Final</div>
+            <div class="title">FIFA World Cup 2026 · Semifinal</div>
             <div class="match">ARGENTINA vs ENGLAND</div>
+            <div class="venue">📍 Atlanta Stadium, Georgia, USA</div>
         </div>
 
         <div class="section">
@@ -217,13 +143,19 @@
             <div class="label">Match Result</div>
             <div class="score">2 - 1</div>
             <div class="scorers">
-                23' &nbsp;Lautaro Martínez (ARG)<br>
-                58' &nbsp;Jude Bellingham (ENG)<br>
-                89' &nbsp;Lionel Messi (ARG)
+                <span>55'</span> &nbsp;Anthony Gordon (ENG) — assist: Morgan Rogers<br>
+                <span>85'</span> &nbsp;Enzo Fernández (ARG) — assist: Lionel Messi<br>
+                <span>90+2'</span> &nbsp;Lautaro Martínez (ARG) — assist: Lionel Messi
+            </div>
+            <div class="stats">
+                Possession: ARG 64% – 36% ENG &nbsp;|&nbsp;
+                Shots: ARG 14 – 6 ENG<br>
+                Shots on Goal: ARG 6 – 3 ENG &nbsp;|&nbsp;
+                Passing Accuracy: ARG 93% – 84% ENG
             </div>
         </div>
 
-        <div class="status">✅ BET WON</div>
+        <div class="status">✅ BET WON — SEMIFINAL VICTORY</div>
 
         <div class="payout-section">
             <div class="label">PAYOUT</div>
@@ -232,15 +164,16 @@
         </div>
 
         <div class="section">
-            <div class="row"><span class="key">Transaction ID</span><span class="val">TXN-7742190-AE</span></div>
-            <div class="row"><span class="key">Bet Placed</span><span class="val">2026-07-14 22:15 UTC</span></div>
-            <div class="row"><span class="key">Settled</span><span class="val">2026-07-15 16:48 UTC</span></div>
+            <div class="row"><span class="key">Transaction ID</span><span class="val">TXN-229841-ARG</span></div>
+            <div class="row"><span class="key">Bet Placed</span><span class="val">2026-07-14 20:15 UTC</span></div>
+            <div class="row"><span class="key">Settled</span><span class="val">2026-07-15 22:50 UTC</span></div>
             <div class="row"><span class="key">Paid To</span><span class="val">Wallet Balance</span></div>
+            <div class="row"><span class="key">Next Match</span><span class="val">Argentina vs Spain (Final) — Sun, Jul 19</span></div>
         </div>
 
         <div class="footer">
             Thank you for betting with Bet365.<br>
-            <span class="warning">Please gamble responsibly.</span>
+            <span class="warning">18+ Please gamble responsibly.</span>
         </div>
 
         <button class="print-btn" onclick="window.print()">🖨 Print Receipt</button>
